@@ -1,6 +1,6 @@
 import requests
 import json
-ACCESS_TOKEN='ZjFhYzI4NWMtMzViZi00MzczLTgxM2MtYzU2ZmY2MmNiMjQ5YWRjMjZjN2ItMTUz'
+ACCESS_TOKEN='YOU TOKEN'
 apiReference=('rooms','Memberships','Messages','Teams','Team Memberships','Webhooks','Organizations','Licenses','Roles','Events')
 print("Type in the API Call you wish to make, please note items are case sensitive:\n",end=' ')
 for i in apiReference:
