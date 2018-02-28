@@ -11,6 +11,10 @@ userInput=input(': ')
 print("\n")
 print("You should try: \n\n",end=' ')
 for e in fruits[userInput]:
-    print(e,end=' ')
-    print(userInput)
-    print()
+    if userInput=='Berries':
+        print(e,end=' ')
+        print()
+    else:
+        print(e,end=' ')
+        print(userInput)
+        print()
