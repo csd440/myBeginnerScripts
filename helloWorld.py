@@ -9,11 +9,12 @@ for i in fruits:
 
 userInput=input(': ')
 print("\n")
-print("You should try: \n\n",end=' ')
+print("You should try:\n")
+print(end=' ')
 for e in fruits[userInput]:
     if userInput=='Berries':
         print(e,end=' ')
-        print()
+        print('\n')
     else:
         print(e,end=' ')
         print(userInput)
