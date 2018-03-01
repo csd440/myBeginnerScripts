@@ -1,5 +1,6 @@
 import requests
 import json
+import pprint
 ACCESS_TOKEN='ZjFhYzI4NWMtMzViZi00MzczLTgxM2MtYzU2ZmY2MmNiMjQ5YWRjMjZjN2ItMTUz'
 apiReference=('rooms','Memberships','Messages','Teams','Team Memberships','Webhooks','Organizations','Licenses','Roles','Events')
 print("Type in the API Call you wish to make, please note items are case sensitive:\n",end=' ')
@@ -16,9 +17,9 @@ print("Your Spark Developer Token: "+HEADER['Authorization'])
 print('\n\n')
 print(response.status_code)
 apiResponse=json.loads(response.text)
-print('key:',end=' ')
-returnedVal1=(apiResponse['items'])
-for n in returnedVal1[0]:
-    print(str(n), end=' ')
-    for z in returnedVal1[0][n]:
-       print(str(z), end=' ')
+print(json.dumps(apiResponse, sort_keys=True, indent=1))
+#print(end=' ')
+#for n in apiResponse['items']:
+    #print(n,':\n\n', end=' ')
+    #for z in apiResponse['items'][0]:
+        #print(apiResponse['items'][0][n], end=' ')
