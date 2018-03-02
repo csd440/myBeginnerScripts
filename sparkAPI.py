@@ -10,16 +10,13 @@ userAPI=input('\n:')
 print("Please wait:")
 URL=('https://api.ciscospark.com/v1/'+userAPI)
 HEADER={'Content-type':'application/json; charset=utf-8','Authorization':'Bearer '+ACCESS_TOKEN}
-PARAMS={'type':'group','max':'2'}
+PARAMS={'type':'group','max':'10'}
 response=requests.get(url=URL, headers=HEADER, params=PARAMS)
 print("Your base API Call will go here\n"+URL)
 print("Your Spark Developer Token: "+HEADER['Authorization'])
 print('\n\n')
 print(response.status_code)
 apiResponse=json.loads(response.text)
-print(json.dumps(apiResponse, sort_keys=True, indent=1))
-#print(end=' ')
-#for n in apiResponse['items']:
-    #print(n,':\n\n', end=' ')
-    #for z in apiResponse['items'][0]:
-        #print(apiResponse['items'][0][n], end=' ')
+print("Your top 10 rooms are listed below:\n",end=' ')
+for n in (apiResponse['items']):
+    print("\nRoom Title: "+n['title']+"\n   Room ID: "+n['id'],end=' ')
