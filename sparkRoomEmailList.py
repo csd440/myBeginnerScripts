@@ -1,7 +1,7 @@
 import requests
 import json
 import pprint
-ACCESS_TOKEN='ZjFhYzI4NWMtMzViZi00MzczLTgxM2MtYzU2ZmY2MmNiMjQ5YWRjMjZjN2ItMTUz'
+ACCESS_TOKEN=''
 print("\nWe will list your most recent rooms so you may collect the room ID\nHow many of your most recent rooms would you like to list?")
 maxRooms=input(": ")
 URL=('https://api.ciscospark.com/v1/rooms')
